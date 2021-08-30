@@ -1,0 +1,22 @@
+1. 선언 방법
+Deque DQX = new ArrayDeque<Integer>();
+
+2. 빼는거 -> https://soft.plusblog.co.kr/24 참조
+
+===넣는거===
+addFirst()                                    addLast()
+              ----->             <----------- add()
+offerFirst()                                  offerLast()
+                                              offer()
+                                              
+====빼는거====
+remove()                                    removeLast()
+removeFirs()  <-----          ----------> 
+poll()                                      pollLast()
+pollFirst()                                 
+ 
+
+===첫번째 원소 빼는거===
+getFirst()                                    getLast()
+peek()         <-------          ----------> 
+peekFirst()                                 peekLast()
