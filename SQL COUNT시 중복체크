@@ -1,0 +1,15 @@
+SQL에서 COUNT() 결과에 NULL이 포함될까?
+
+  포함되는 경우 : COUNT(*)
+  포함되지 않는 경우: COUNT(ColumnName)
+
+COUNT(컬럼명)을 사용하면 NULL 값은 제외하고 COUNT 합니다. COUNT(*)를 사용하면 NULL도 포함하여 전부 COUNT 합니다.
+
+하지만, 빈 문자열은 COUNT() 결과에 포함됩니다. 빈 문자열을 COUNT() 결과에서 빼려면 빈 문자열을 NULL로 바꾸고 COUNT()를 하면 됩니다.
+
+mysql : COUNT( IF (ColumnName=”, NULL, ColumnName) )
+mssql : COUNT( CASE WHEN ColumnName=” THEN NULL ELSE ColumnName END )
+
+TRIM() 함수를 사용하면 스페이스, 탭, 줄바꿈 등의 의미 없는 문자만 있는 것도 COUNT 되지 않게 됩니다.
+
+COUNT( DISTINCT( ColumnName ) )으로 하면 중복되지 않고 NULL은 제외되는 값들만 COUNT 하게 됩니다.
