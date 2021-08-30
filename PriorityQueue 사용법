@@ -1,0 +1,10 @@
+1. 선언
+PriorityQueue<Node> PQ = new PriorityQueue<Node>();
+(클래스를 넣을 때)
+
+2. 값 넣을때
+PQ.offer(new Node());
+
+3. 뺄때
+PQ.poll();
+
