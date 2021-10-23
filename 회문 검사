@@ -1,0 +1,38 @@
+public static int isPalin(String S) {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(S);
+		
+		if(sb.toString().equals(sb.reverse().toString()))
+			return 1;
+		
+		else
+			return 0;
+	}
+  
+  ============================================================
+  
+  2. 한글자를 빼서 회문이 되는지 검사
+  
+  if(isSimilarPalin(0, check_S.length()-1, true) == 1) {
+				System.out.println(1);
+			}
+  
+  public static int isSimilarPalin(int left, int right, boolean skip) {
+		
+		if(left > right)
+			return 1;
+		
+		else if(check_S.charAt(left) == check_S.charAt(right)) {
+			return isSimilarPalin(left+1, right-1, skip);
+		}
+		
+		else if(skip) {
+			return Math.max(isSimilarPalin(left+1, right, false), 
+					isSimilarPalin(left, right-1, false));
+		}
+		
+		else
+			return 0;
+	}
