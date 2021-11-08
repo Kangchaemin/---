@@ -1,0 +1,27 @@
+1. int -> char
+  int i1 = 65;
+  char c1 = (char)i1;
+
+
+2. char -> int
+
+  char c1 = '9'
+  int i1 = c1 - '0'
+  
+  
+3. int -> String
+  String s1 = "123"
+  int i1 = Integer.parseInt(s1)
+  
+4. String -> int
+  int i1 = 123;
+  String s1 = Integer.toString(i1)
+  
+  
+5. 붙어있는 String을 char 배열로 변환할때
+  char C[] = S.toCharArray();
+  
+6. 띄어있는 String을 String배열로 넣을때
+  String S1 = "Hello World"
+  String SA[] = S1.split(" ");
+
