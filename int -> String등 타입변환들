@@ -9,11 +9,11 @@
   int i1 = c1 - '0'
   
   
-3. int -> String
+3. String -> int
   String s1 = "123"
   int i1 = Integer.parseInt(s1)
   
-4. String -> int
+4. int -> String
   int i1 = 123;
   String s1 = Integer.toString(i1)
   
